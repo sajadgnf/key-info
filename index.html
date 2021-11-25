@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <title>Keys Info</title>
+</head>
+
+<body>
+
+    <section id="start">
+        <h1>Press Any Key To Get The Keycode</h1>
+    </section>
+
+    <section id="main">
+        <!-- Page Head -->
+        <h1 class="header">Keys Info</h1>
+
+        <!-- User Select Key -->
+        <div class="ascii">
+            <h1 class="key">22</h1>
+        </div>
+
+        <!-- Selected Key Info -->
+        <div class="infos">
+            <div class="info">
+                <h3 class="info_title">event.key</h3>
+                <h3 id="keyself" class="info_body" onclick="copyText(event)"></h3>
+            </div>
+
+            <div class="info">
+                <h3 class="info_title">event.location</h3>
+                <h3 id="key_location" class="info_body" onclick="copyText(event)"></h3>
+            </div>
+
+            <div class="info">
+                <h3 class="info_title">event.which</h3>
+                <h3 id="key_which" class="info_body" onclick="copyText(event)"></h3>
+            </div>
+
+            <div class="info">
+                <h3 class="info_title">event.code</h3>
+                <h3 id="key_code" class="info_body" onclick="copyText(event)"></h3>
+            </div>
+        </div>
+
+        <div id="alert">
+            <p>Copied Text To ClipBoard</p>
+        </div>
+    </section>
+
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

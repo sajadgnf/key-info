@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    src: url(../../index.html);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: #f3f3fb;
+}
+
+#start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#start h1 {
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 5px 0 #aaa;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+#main {
+    display: none;
+    padding: 35px;
+}
+
+/* Page Head */
+.header {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+/* User Select Key */
+.ascii .key {
+    text-align: center;
+    font-size: 18rem;
+    color: rgb(71, 70, 70);
+}
+
+/* Selected Key Info */
+.infos {
+    margin-top: 20px;
+    width: 200vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info {
+    width: 25%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 #aaa;
+    margin: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.info:hover {
+    transform: translateY(-5px) scale(1.005);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11);
+    cursor: pointer;
+}
+
+.info_title {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #b6e4f3;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.info_body {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #fff;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    font-size: 24px;   
+}
+
+.info_body::selection{
+    background: transparent;
+}
+
+#alert{
+    display: none;
+  position: fixed;
+  top: 50px;
+  left: 30px;
+  box-shadow: 0 0 5px 0 #aaa;
+  padding: 20px 50px;
+  background-color: rgb(0, 174, 255);
+  color: #fff;
+  border-radius: 5px;
+  transition: all .15s;
+  animation: 0.6s fade;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+    0%{
+        left: -100px;
+    }
+    100%{
+        left: 10%;
+    }
+}
+
+/* Media Query */
+@media (max-width: 1000px) {
+    .infos{
+        width: 100vh;
+        flex-wrap: wrap;
+    }
+    .info{
+        width: 44%;
+    }
+}
+
+@media (max-width: 640px) {
+    .infos{
+        width: auto;
+        flex-wrap: wrap;
+    }
+    .info{
+        width:100%;
+    }
+}
